@@ -115,8 +115,16 @@ function Hero() {
         alt="Analysts reviewing holographic data dashboards in a research command centre"
         width={1600}
         height={1104}
-        className="absolute inset-0 h-full w-full object-cover opacity-45 mix-blend-luminosity"
+        className="absolute inset-0 h-full w-full object-cover opacity-40 mix-blend-luminosity"
       />
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(100deg, var(--primary-deep) 0%, color-mix(in oklab, var(--primary-deep) 78%, transparent) 45%, transparent 78%)",
+        }}
+      />
+
       <div className="relative mx-auto grid max-w-6xl gap-12 px-5 py-24 md:py-32">
         <div className="max-w-3xl">
           <span className="inline-flex items-center rounded-sm border border-primary-foreground/40 px-4 py-2 text-sm font-semibold text-primary-foreground">
