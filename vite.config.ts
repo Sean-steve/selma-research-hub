@@ -13,7 +13,7 @@ export default defineConfig({
     server: { entry: "server" },
     vite: {
     server: {
-      allowedHosts: ["pork-bazuu.onrender.com"],
+      allowedHosts: ["selma-research.onrender.com"],
     },
   },
   },
