@@ -1,24 +1,25 @@
 import { createFileRoute } from "@tanstack/react-router";
+import SelmaLanding from "@/components/site/SelmaLanding";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Selma Research & Data Analytics Development" },
+      {
+        name: "description",
+        content:
+          "Selma Research delivers project management, Power BI and Tableau analytics, grant proposals, market research and machine learning for evidence-driven organisations.",
+      },
+      {
+        property: "og:title",
+        content: "Selma Research & Data Analytics Development",
+      },
+      {
+        property: "og:description",
+        content:
+          "Research, dashboards, grant proposals and machine learning — turning your data into decisions you can fund and defend.",
+      },
+    ],
+  }),
+  component: SelmaLanding,
 });
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
